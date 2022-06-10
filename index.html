@@ -466,29 +466,53 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-mail-box">
+          <h2 class="footer-title">Подпишитесь на рассылку</h2>
+          <div class="mail-box">
+            <label for="footer-email"></label>
+            <input
+              type="mail"
+              name="mail"
+              id="footer-email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="mailing-button">
+              <span class="mailing-button-text">Подписаться</span>
+              <svg class="mailing-icon" width="24px" height="24px">
+                <use href="./images/icon.svg#send"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
     <div class="modal-box is-hidden" data-modal>
       <div class="modal">
-        <button class="button close" data-modal-close></button>
+        <svg class="close" width="11" height="11" data-modal-close>
+          <use href="./images/icon.svg#close-black"></use>
+        </svg>
         <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
         <form>
-          <label for="name">Имя</label>
+          <label for="name" class="form-text">Имя</label>
           <input type="text" name="name" id="name" />
 
-          <label for="tel">Телефон</label>
+          <label for="tel" class="form-text">Телефон</label>
           <input type="tel" name="tel" id="tel" />
 
-          <label for="mail">Почта</label>
+          <label for="mail" class="form-text">Почта</label>
           <input type="email" name="mail" id="mail" />
 
-          <label for="comment">Комментарий</label>
+          <label for="comment" class="form-text">Комментарий</label>
           <textarea name="comment" id="comment " cols="30" rows="10"></textarea>
 
+          <br />
+
           <input type="checkbox" name="yes" value="yes" id="yes" />
-          <label for="yes"
-            >Соглашаюсь с рассылкой и принимаю Условия договора</label
-          >
+          <label for="yes" class="yes-text"
+            >Соглашаюсь с рассылкой и принимаю
+            <a href="" class="yes-document">Условия договора</a>
+          </label>
         </form>
         <button type="submit" class="modal-button">
           <span class="modal-button-text">Отправить</span>
