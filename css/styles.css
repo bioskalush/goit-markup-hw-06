@@ -799,14 +799,23 @@ a {
   color: var(--primary-text-color);
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .form-text {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-
+  margin-bottom: 4px;
   color: var(--additional-text-color);
 }
 .yes-text {
+  display: inline;
   font-family: "Roboto";
   font-style: normal;
   font-size: 14px;
@@ -821,17 +830,16 @@ a {
   text-decoration: underline;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-}
-
 textarea {
   resize: none;
 }
 
 .modal-button {
+  display: block;
   padding: 10px 55px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   min-width: 200px;
   background-color: var(--accent-color);
   border-radius: 4px;
