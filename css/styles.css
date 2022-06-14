@@ -537,6 +537,7 @@ a {
 
 .input-mail {
   background-color: var(--footer-color);
+  padding-left: 16px;
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -545,7 +546,6 @@ a {
 }
 
 .input-mail::placeholder {
-  padding-left: 16px;
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
@@ -829,10 +829,12 @@ a {
   position: absolute;
   top: 30px;
   left: 10px;
+  /* transform: translateY(-50%); */
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form:hover .form-icon {
+.form:hover .form-icon,
+.form:focus .form-icon {
   fill: var(--accent-color);
 }
 
@@ -848,7 +850,7 @@ a {
 }
 
 .form:hover .input,
-.form:active .input {
+.form:focus .input {
   border-color: var(--accent-color);
 }
 
@@ -885,12 +887,53 @@ a {
 
 .contract {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
 }
 
+.check-box {
+  position: relative;
+  cursor: pointer;
+}
+
+.contract-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contract-icon-check {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  opacity: 0;
+  fill: var(--bg-color);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box:hover .contract-icon,
+.check-box:focus .contract-icon {
+  background-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.check-box:hover .contract-icon-check,
+.check-box:focus .contract-icon-check {
+  opacity: 1;
+}
+
 .yes-text {
   display: inline;
+  padding-left: 36px;
   font-family: "Roboto";
   font-style: normal;
   font-size: 14px;

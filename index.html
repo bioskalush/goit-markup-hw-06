@@ -469,22 +469,24 @@
 
         <div class="footer-mail-box">
           <h2 class="footer-title">Подпишитесь на рассылку</h2>
-          <div class="mail-box">
-            <label for="footer-email"></label>
-            <input
-              class="input-mail"
-              type="mail"
-              name="mail"
-              id="footer-email"
-              placeholder="E-mail"
-            />
-            <button type="submit" class="mailing-button">
-              <span class="mailing-button-text">Подписаться</span>
-              <svg class="mailing-icon" width="24px" height="24px">
-                <use href="./images/icon.svg#send"></use>
-              </svg>
-            </button>
-          </div>
+          <form>
+            <div class="mail-box">
+              <label for="footer-email"></label>
+              <input
+                class="input-mail"
+                type="email"
+                name="mail"
+                id="footer-email"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="mailing-button">
+                <span class="mailing-button-text">Подписаться</span>
+                <svg class="mailing-icon" width="24px" height="24px">
+                  <use href="./images/icon.svg#send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -493,7 +495,7 @@
         <svg class="close" width="11" height="11" data-modal-close>
           <use href="./images/icon.svg#close-black"></use>
         </svg>
-        <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
         <form>
           <div class="form">
             <label for="name" class="form-text">Имя</label>
@@ -531,17 +533,33 @@
             ></textarea>
           </div>
 
- <div class="contract">
-          <input type="checkbox" name="yes" value="yes" id="yes"/>
-          <label for="yes" class="yes-text"
-            >Соглашаюсь с рассылкой и принимаю
-            <a href="" class="yes-document">Условия договора</a>
-          </label>
-        </form></div>
+          <div class="contract">
+            <div class="check-box">
+              <svg class="contract-icon" width="16" height="15">
+                <use href="./images/icon.svg#cube"></use>
+              </svg>
+              <svg class="contract-icon-check" width="11" height="8">
+                <use href="./images/icon.svg#check"></use>
+              </svg>
+            </div>
 
-        <button type="submit" class="modal-button">
-          <span class="modal-button-text">Отправить</span>
-        </button>
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="yes"
+              value="yes"
+              id="yes"
+            />
+            <label for="yes" class="yes-text"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="" class="yes-document">Условия договора</a>
+            </label>
+          </div>
+
+          <button type="submit" class="modal-button">
+            <span class="modal-button-text">Отправить</span>
+          </button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
